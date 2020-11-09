@@ -1,24 +1,26 @@
-public class Adapter implements MenuItem{
+public class Adapter implements ElementoMenu{
 
-    private Mercancia adapt=new Mercancia();
+    private Mercancia adapt;
+    private int indice;
 
     @Override
-    public Adapter(Mercancia producto){
+    public Adapter(){
+        this.adapt=new Mercancia();
 
     }
 
     @Override
     public void toString(){
-        System.out.println("Tu mercancia es un:");
+        this.adapt.leerEtiqueta();
     }
 
     @Override
-    public void busca(){
-
+    public void busca(int indice){
+        this.adapt.encuentra(indice);
     }
 
     @Override
-    public void gethojas(){
-
+    public void hijos(int indice){
+        this.adapt.getIndicesMercancias(indice);
     }
 }
