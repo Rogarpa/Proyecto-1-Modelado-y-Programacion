@@ -27,12 +27,10 @@ public class Mercancia{
     }
 
     /**
-    *
-    *
+    *Metodo apra hacer una descripción del artículo.
+    *@return la descripción del artículo.
     */
-    public String leerEtiqueta(){
-        return "Es un/una "+getNombre()+" de tipo "+getTipo()+"con precio $"+getPrecio();
-    }
+    public String leerEtiqueta(){}
 
     /**
     *Metodo para encontrar en el menu alguna mercancia.
