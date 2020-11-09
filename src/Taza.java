@@ -9,7 +9,7 @@ public class Taza extends Mercancia{
 
     @Override
     public String leerEtiqueta(){
-        return "Es un/una "+getNombre()+" de tipo "+getTipo()+"con precio $"+getPrecio();
+        return "Es una Taza de cerámica.";
     }
 
 }
