@@ -8,7 +8,7 @@ public class Playera extends Mercancia{
     }
 
     @Override
-    public String toString(){
+    public String leerEtiqueta(){
         return "Es un/una "+getNombre()+" de tipo "+getTipo()+"con precio $"+getPrecio();
     }
 }

@@ -3,7 +3,7 @@ public class Adapter implements MenuItem{
     private Mercancia adapt=new Mercancia();
 
     @Override
-    public Adapter(){
+    public Adapter(Mercancia producto){
 
     }
 

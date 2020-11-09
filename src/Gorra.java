@@ -8,7 +8,7 @@ public class Gorra extends Mercancia{
     }
 
     @Override
-    public String toSTring(){
+    public String leerEtiqueta(){
         return "Es un/una "+getNombre()+" de tipo "+getTipo()+"con precio $"+getPrecio();
     }
 }

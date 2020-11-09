@@ -11,10 +11,6 @@ public class Mercancia{
     public String material;
 
     /**
-    *El constructor vacio de la clase.
-    */
-    public Mercancia(){}
-    /**
     *El constructor de la Clase Mercancia.
     *@param nombre el nombre del artículo.
     *@param type el tipo de artículo.
@@ -29,49 +25,28 @@ public class Mercancia{
         this.color=color;
         this.material=material;
     }
-    /**
-    *Metodo para acceder al nombre del artículo.
-    *@return el nombre.
-    */
-    public String getNombre(){
-        return this.nombre;
-    }
 
     /**
-    *Método para acceder al nombre del artículo.
-    *@return el tipo de artículo.
+    *
+    *
     */
-    public String getTipo(){
-        return this.type;
-    }
-
-    /**
-    *Método para acceder al precio del artículo.
-    *@return el precio del artículo.
-    */
-    public double getPrecio(){
-        return this.precio;
-    }
-
-    /**
-    *Metodo para acceder al color del artículo.
-    *@return el color del artículo.
-    */
-    public String getColor(){
-        return this.color;
-    }
-
-    /**
-    *Metodo para acceder al material del artículo.
-    *@return el material del artículo.
-    */
-    public String getMaterial(){
-        return this.material;
-    }
-
-    @Override
-    public String toString(){
+    public String leerEtiqueta(){
         return "Es un/una "+getNombre()+" de tipo "+getTipo()+"con precio $"+getPrecio();
     }
 
+    /**
+    *Metodo para encontrar en el menu alguna mercancia.
+    *@return el item encontrado.
+    */
+    public MenuItem encuentra(){
+    return null;
+    }
+
+    /**
+    *Metodo para obtener los indices donde son Mercancias.
+    *@return el arreglo con los indices de las mercancias.
+    */
+    public Array[] getIndicesMercancias(){
+        return null;
+    }
 }

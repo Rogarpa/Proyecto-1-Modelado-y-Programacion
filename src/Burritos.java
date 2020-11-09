@@ -1,5 +1,7 @@
 public class Burritos implements Cocinar{
 
+    protected MenuItem aCocinar;
+
     public void cocinar(MenuItem platillo){
         System.out.println("Preparando las tortillas con masa fresca.");
         System.out.println("Esperando a que se hagan las tortillas...");

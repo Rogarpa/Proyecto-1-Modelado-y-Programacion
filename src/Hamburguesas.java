@@ -1,5 +1,7 @@
 public class Hamburguesas implements Cocinar{
 
+    protected MenuItem aCocinar;
+
     public void cocinar(MenuItem platillo){
         System.out.println("Calentando la plancha.");
         System.out.println("Preparando los panes de la Hamburguesa.");
