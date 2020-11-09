@@ -1,17 +1,27 @@
-public class Adapter implements ElementoMenu{
+public class Adapter implements Enum{
 
     private Mercancia adapt;
     private int indice;
 
     @Override
+    public int getEnum(){
+        this.adapt.getIndice();
+    }
+
+    /**
+    *Constructor de la clase.
+    */
     public Adapter(){
         this.adapt=new Mercancia();
 
     }
 
-    @Override
-    public void toString(){
-        this.adapt.leerEtiqueta();
+    /**
+    *Metodo para obtener una descripción del Elemento.
+    *@return regresa la descripción.
+    */
+    public String toString(){
+        return this.adapt.leerEtiqueta();
     }
 
     @Override

@@ -38,6 +38,13 @@ public class Mercancia{
     }
 
     /**
+    *Metod que me regresa el indice de cada artículo.
+    *@return el indice del artículo.
+    */
+    public int getIndice(){
+        return this.indice;
+    }
+    /**
     *Metodo para encontrar en el menu alguna mercancia.
     *@return el item encontrado.
     */
@@ -49,7 +56,7 @@ public class Mercancia{
     *Metodo para obtener los indices donde son Mercancias.
     *@return el arreglo con los indices de las mercancias.
     */
-    public Array[] getIndicesMercancias(int ind){
+    public int[] getIndicesMercancias(int ind){
         return null;
     }
 }
