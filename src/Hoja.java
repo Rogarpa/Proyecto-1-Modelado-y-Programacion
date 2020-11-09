@@ -1,4 +1,4 @@
-public interface Enum extends ElementoMenu{
+public interface Hoja extends ElementoMenu{
     /**
     *Metodo que regresa el Indice de cada elemento.
     *@return el indice del elemento.
