@@ -20,13 +20,9 @@ public class Pizza implements ElementoMenu{
     public String toString(){
         return "";
     }
-<<<<<<< HEAD
 
     @Override
-    public void buscaHoja(){
-=======
     public Hoja buscaHoja(){
->>>>>>> 7a32041ca6ed9786223c4b11d64b1605bcd25cd4
 
     }
 

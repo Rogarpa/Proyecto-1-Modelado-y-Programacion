@@ -11,13 +11,6 @@ public class Hamburguesa implements ElementoMenu{
 
     public void agregarHijo(ElementoMenu h){
         listaHijos.add(h);
-<<<<<<< HEAD
-=======
-    }
-
-    public void eliminaHIjo(ElementoMenu h){
-        listaHijos.remove(h);
->>>>>>> 7a32041ca6ed9786223c4b11d64b1605bcd25cd4
     }
 
     public void eliminaHIjo(ElementoMenu h){
@@ -28,6 +21,8 @@ public class Hamburguesa implements ElementoMenu{
     public String toString(){
         return "";
     }
+
+    @Override
     public Hoja buscaHoja(){
 
     }
