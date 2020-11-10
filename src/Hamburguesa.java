@@ -2,23 +2,36 @@ import java.util.LinkedList;
 
 public class Hamburguesa implements ElementoMenu{
 
-    LinkedList<ElementoMenu> listaHijos;
+    protected LinkedList<ElementoMenu> listaHijos;
 
     public Hamburguesa(){
         listaHijos = new LinkedList<>();
+        //llenadoMenu
     }
 
     public void agregarHijo(ElementoMenu h){
-        hijos.add(h);
+        listaHijos.add(h);
     }
 
+    public void eliminaHIjo(ElementoMenu h){
+        listaHijos.remove(h);
+    }
+
+    @Override
     public String toString(){
         return "";
     }
-    public void buscaHoja(){
+    public Hoja buscaHoja(){
 
     }
+
+    @Override
     public LinkedList<Integer> rangoHojas(){
-        return null;
+    /**int min=0;
+    int max=0;
+    for(ElementoMenu elem:listaHijos){
+        getIndexof(elem);
+    }*/
+    return null;
     }
 }

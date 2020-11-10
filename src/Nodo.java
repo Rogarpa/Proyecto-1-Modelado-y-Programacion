@@ -11,12 +11,17 @@ public class Nodo implements ElementoMenu{
         hijos.add(h);
     }
 
+    @Override
     public String toString(){
         return "";
     }
+
+    @Override
     public void buscaHoja(){
 
     }
+
+    @Override
     public LinkedList<Integer> rangoHojas(){
         return null;
     }

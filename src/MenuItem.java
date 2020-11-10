@@ -12,15 +12,20 @@ public class MenuItem implements ElementoMenu{
     this.precio = precio;
     this.tipoPadre = tipoPadre;
     }
-    
+
+    @Override
     public String toString(){
         return "";
     }
+
+    @Override
     public void buscaHoja(){
 
     }
+
+    @Override
     public LinkedList<Integer> rangoHojas(){
         return null;
     }
-    
+
 }

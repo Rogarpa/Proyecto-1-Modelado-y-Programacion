@@ -9,16 +9,23 @@ public class Burrito implements ElementoMenu{
         listaHijos = new Hashtable<>();
     }
 
+
+    */
     public void agregarHijo(ElementoMenu h){
-        hijos.add(h);
+        listaHijos.add(h);
     }
 
+    @Override
     public String toString(){
         return "";
     }
+
+    @Override
     public void buscaHoja(){
 
     }
+
+    @Override
     public LinkedList<Integer> rangoHojas(){
         return null;
     }
