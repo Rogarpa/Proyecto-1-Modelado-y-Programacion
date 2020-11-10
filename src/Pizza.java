@@ -2,20 +2,24 @@ import java.util.LinkedList;
 
 public class Pizza implements ElementoMenu{
 
-    ElementoMenu[] listaHijos;
+    protected ElementoMenu[] listaHijos;
 
     public Pizza(){
         listaHijos = new ElementoMenu[]();
     }
 
     public void agregarHijo(ElementoMenu h){
-        hijos.add(h);
+        listaHijos.add(h);
+    }
+
+    public void eliminaHIjo(ElementoMenu h){
+        listaHijos.remove(h);
     }
 
     public String toString(){
         return "";
     }
-    public void buscaHoja(){
+    public Hoja buscaHoja(){
 
     }
     public LinkedList<Integer> rangoHojas(){

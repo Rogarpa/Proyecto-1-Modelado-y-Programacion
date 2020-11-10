@@ -3,20 +3,24 @@ import java.util.LinkedList;
 
 public class Burrito implements ElementoMenu{
 
-    Hastable<Integer,ElementoMenu> listaHijos;
+    protected Hastable<Integer,ElementoMenu> listaHijos;
 
     public Burrito(){
         listaHijos = new Hashtable<>();
     }
 
     public void agregarHijo(ElementoMenu h){
-        hijos.add(h);
+        listaHijos.add(h);
+    }
+
+    public void eliminaHIjo(ElementoMenu h){
+        listaHijos.remove(h);
     }
 
     public String toString(){
         return "";
     }
-    public void buscaHoja(){
+    public Hoja buscaHoja(){
 
     }
     public LinkedList<Integer> rangoHojas(){

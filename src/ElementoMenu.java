@@ -3,7 +3,7 @@ import java.util.LinkedList;
 public interface ElementoMenu{
 
     public String toString();
-    public void buscaHoja();
+    public Hoja buscaHoja();
     public LinkedList<Integer> rangoHojas();
 
 }
