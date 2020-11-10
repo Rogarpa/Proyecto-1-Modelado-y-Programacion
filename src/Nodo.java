@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-public class Nodo{
+public class Nodo implements ElementoMenu{
     LinkedList<ElementoMenu> hijos;
 
     public Nodo(){

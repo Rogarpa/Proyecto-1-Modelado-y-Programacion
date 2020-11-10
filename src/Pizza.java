@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-public class Pizza{
+public class Pizza implements ElementoMenu{
 
     ElementoMenu[] listaHijos;
 

@@ -1,7 +1,7 @@
 import java.util.Hashtable;
 import java.util.LinkedList;
 
-public class Burrito{
+public class Burrito implements ElementoMenu{
 
     Hastable<Integer,ElementoMenu> listaHijos;
 

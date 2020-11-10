@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-public class Hamburguesa{
+public class Hamburguesa implements ElementoMenu{
 
     LinkedList<ElementoMenu> listaHijos;
 
