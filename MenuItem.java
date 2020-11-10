@@ -1,7 +1,7 @@
 import java.util.Iterator;
 import java.util.ArrayList;
 
-public class MenuItem extends MenuComponent {
+public class MenuItem extends MenuComponent implements Menu {
     String nombre;
     String descriction;
     double precio;

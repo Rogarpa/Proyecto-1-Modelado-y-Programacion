@@ -3,7 +3,7 @@ import java.util.Iterator;
 public interface Menu {
 	public Iterator<?> createIterator();
 
-	String name;
+	protected String name;
 
 	/**
 	*Metodo que nos permite acceder al nombre de nuestros platillos.
