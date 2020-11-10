@@ -1,4 +1,4 @@
-public enum TipoComida{
+public enum TipoProducto{
     hamburguesa
     pizza
     burrito
