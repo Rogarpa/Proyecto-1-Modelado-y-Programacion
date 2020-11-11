@@ -19,7 +19,7 @@ public class Nodo implements ElementoMenu{
     public String toString(){
         return "";
     }
-    public Hoja buscaHoja(){
+    public Hoja buscaHoja(int indiceHojaABuscar){
 
     }
 

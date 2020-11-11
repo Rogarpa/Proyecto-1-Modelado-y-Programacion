@@ -23,7 +23,7 @@ public class Hamburguesa implements ElementoMenu{
     }
 
     @Override
-    public Hoja buscaHoja(){
+    public Hoja buscaHoja(int indiceHojaABuscar){
 
     }
 

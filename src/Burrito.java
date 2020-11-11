@@ -21,7 +21,7 @@ public class Burrito implements ElementoMenu{
     }
 
     @Override
-    public void buscaHoja(){
+    public Hoja buscaHoja(int indiceHojaABuscar){
 
     }
 

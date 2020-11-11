@@ -18,7 +18,7 @@ public class MenuItem implements Hoja{
         return "";
     }
     @Override
-    public Hoja buscaHoja(){
+    public Hoja buscaHoja(int indiceHojaABuscar){
 
     }
 
