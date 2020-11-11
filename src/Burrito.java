@@ -29,14 +29,14 @@ public class Burrito implements ElementoMenu{
 
     @Override
     public LinkedList<Integer> rangoHojas(){
-        /**
     int min=0;
     int max=0;
+    Collection<ElementoMenu> col=listaHijos.values();
     LinkedList<Integer> aux=new LinkedList<>();
     LinkedList<Integer> aux2=new LinkedList<>();
-    for(ElementoMenu elem:listaHijos){
+    for(ElementoMenu elem:col){
         aux2=elem.rangoHojas();
-        for(ElementoMenu elem2:aux2){
+        for(Integer elem2:aux2){
             if(elem2>max){
                 max=elem2;
             }else if(elem2<=min){
