@@ -27,7 +27,7 @@ public class Hamburguesa implements ElementoMenu{
 
     @Override
     public String toString(){
-        return hijo0 + " " + hijo1 + " " + hijo2 + " " + hijo3 + " " + hijo4;
+        return hijo0"\n" + hijo1"\n"  + hijo2"\n" + hijo3"\n"  + hijo4"\n";
     }
 
     @Override
@@ -38,7 +38,7 @@ public class Hamburguesa implements ElementoMenu{
     @Override
     public LinkedList<Integer> rangoHojas(){
     int min=0;
-    int max=0;
+    int max=4;
     for(ElementoMenu elem:listaHijos){
         getIndexof(elem);
     }
