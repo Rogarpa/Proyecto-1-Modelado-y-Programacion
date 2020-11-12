@@ -46,7 +46,7 @@ public class Burrito implements ElementoMenu{
     }
     aux.add(min);
     aux.add(max);
-    return aux;*/
+    return aux;
     return null;
     }
 }

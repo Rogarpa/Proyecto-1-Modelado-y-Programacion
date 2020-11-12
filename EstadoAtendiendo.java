@@ -1,4 +1,4 @@
-public class public EstadoAtendiendo implements EstadoRobot{
+public class EstadoAtendiendo implements EstadoRobot{
     protected Robot dueño;
 
     public EstadoAtendiendo(Robot dueño){
@@ -7,7 +7,7 @@ public class public EstadoAtendiendo implements EstadoRobot{
     
     @Override void activarse(){
         System.out.println("No es posible activarse.");
-        throw new UnsupportedOperationException("Acción no disponible en el robot.")
+        throw new UnsupportedOperationException("Acción no disponible en el robot.");
     }
     @Override void suspenderse(){
         System.out.println("Suspendiendo");
@@ -25,7 +25,7 @@ public class public EstadoAtendiendo implements EstadoRobot{
     }
     @Override void irALaBarra(){
         System.out.println("No es posible ir a la barra.");
-        throw new UnsupportedOperationException("Acción no disponible en el robot.")
+        throw new UnsupportedOperationException("Acción no disponible en el robot.");
     }
     @Override void caminar(){
         System.out.println("Caminando");
@@ -33,11 +33,11 @@ public class public EstadoAtendiendo implements EstadoRobot{
     }
     @Override void irALaCocina(){
         System.out.println("No es posbile ir a la cocina.");
-        throw new UnsupportedOperationException("Acción no disponible en el robot.")
+        throw new UnsupportedOperationException("Acción no disponible en el robot.");
     }
     @Override void cocinar(){
         System.out.println("No es posible cocinar.");
-        throw new UnsupportedOperationException("Acción no disponible en el robot.")
+        throw new UnsupportedOperationException("Acción no disponible en el robot.");
     }
 
 

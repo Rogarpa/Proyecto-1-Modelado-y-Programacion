@@ -34,7 +34,7 @@ public class Hamburguesa implements ElementoMenu{
     public Hoja buscaHoja(){
 
     }
-
+    
     @Override
     public LinkedList<Integer> rangoHojas(){
     int min=0;
