@@ -1,4 +1,4 @@
-public interface public EstadoRobot{
+public interface EstadoRobot{
     
     /**Realiza la acción de activarse
      * @throws UnsupportedOperationException cuando la accion no está disponible.

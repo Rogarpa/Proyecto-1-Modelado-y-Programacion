@@ -1,4 +1,4 @@
-import java.util.LinkedList;
+import java.util.*;
 
 public class Hamburguesa implements ElementoMenu{
 
@@ -9,10 +9,18 @@ public class Hamburguesa implements ElementoMenu{
         //llenadoMenu
     }
 
+    /**
+    *Método para agregar elementos al menu.
+    *@param h el elemento a gregar.
+    */
     public void agregarHijo(ElementoMenu h){
         listaHijos.add(h);
     }
 
+    /**
+    *Metodo para eliminar elementos del Menu.
+    *@param h el elemento a eliminar.
+    */
     public void eliminaHIjo(ElementoMenu h){
         listaHijos.remove(h);
     }
@@ -26,14 +34,25 @@ public class Hamburguesa implements ElementoMenu{
     public Hoja buscaHoja(int indiceHojaABuscar){
 
     }
-
+    
     @Override
     public LinkedList<Integer> rangoHojas(){
-    /**int min=0;
+    int min=0;
     int max=0;
+    LinkedList<Integer> aux=new LinkedList<>();
+    LinkedList<Integer> aux2=new LinkedList<>();
     for(ElementoMenu elem:listaHijos){
-        getIndexof(elem);
-    }*/
-    return null;
+        aux2=elem.rangoHojas();
+        for(Integer elem2:aux2){
+            if(indexOf(elem2)>max){
+                max=elem2;
+            }else if(indexOf(elem2)<=min){
+                min=elem2;
+            }
+        }
+    }
+    aux.add(min);
+    aux.add(max);
+    return aux;
     }
 }
