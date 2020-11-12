@@ -23,7 +23,13 @@ public class Burrito implements ElementoMenu{
 
     @Override
     public Hoja buscaHoja(int indiceHojaABuscar){
-        return null;
+        Hoja aux;
+        for(ElementoMenu em: listaHijos.values()){
+            aux = em.buscaHoja(indiceHojaABuscar);
+            if(aux != null) return (Hoja)listaHijos.get(aux);
+            
+        }
+    return null;    
     }
 
     @Override

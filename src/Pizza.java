@@ -29,17 +29,26 @@ public class Pizza implements ElementoMenu{
 
     @Override
     public Hoja buscaHoja(int indiceHojaABuscar){
-        return null;
+        Hoja aux = null;
+        for(ElementoMenu em: listaHijos){
+            if(em != null) aux = em.buscaHoja(indiceHojaABuscar);
+            if(aux != null){
+                System.out.println("Encontrado en pizza");
+                return aux;
+            }
+        }
+    return null;
     }
 
     @Override
     public LinkedList<Integer> rangoHojas(){
-    int min=0;
-    int max=0;
+    int min=1;
+    int max=1;
     LinkedList<Integer> aux=new LinkedList<>();
     LinkedList<Integer> aux2=new LinkedList<>();
     for(ElementoMenu elem:listaHijos){
-        aux2=elem.rangoHojas();
+        if(elem != null)aux2=elem.rangoHojas();
+
         for(Integer elem2:aux2){
             if(elem2>max){
                 max=elem2;

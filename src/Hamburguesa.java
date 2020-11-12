@@ -32,7 +32,15 @@ public class Hamburguesa implements ElementoMenu{
 
     @Override
     public Hoja buscaHoja(int indiceHojaABuscar){
-        return null;
+        Hoja aux;
+        for(ElementoMenu em: listaHijos){
+            aux = em.buscaHoja(indiceHojaABuscar);
+            if(aux != null){
+                System.out.println("Encontrado en nodo");
+                return aux;
+            }
+        }
+    return null;
     }
 
     @Override

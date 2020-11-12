@@ -5,16 +5,6 @@ public class Nodo implements ElementoMenu{
 
     public Nodo(){
         listaHijos = new LinkedList<>();
-        /**
-        *Esto es para probar el metodo rangoHojas() no es importante.
-        *MenuItem burrito1=new MenuItem(1,"","",false,0.30,TipoProducto.burrito);
-        MenuItem pizza1=new MenuItem(2,"","",false,0.30,TipoProducto.pizza);
-        //MenuItem hamburguesa1=new MenuItem(3,"","",false,0.30,TipoProducto.burrito);
-        listaHijos.add(burrito1);
-        listaHijos.add(pizza1);
-        //listaHijos.add(hamburguesa1);
-        *
-        */
     }
 
     /**
@@ -38,7 +28,15 @@ public class Nodo implements ElementoMenu{
         return "";
     }
     public Hoja buscaHoja(int indiceHojaABuscar){
-        return null;
+        Hoja aux;
+        for(ElementoMenu em: listaHijos){
+            aux = em.buscaHoja(indiceHojaABuscar);
+            if(aux != null){
+                System.out.println("Encontrado en nodo");
+                return aux;
+            }
+        }
+    return null;
     }
 
     @Override

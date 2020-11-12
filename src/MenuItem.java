@@ -8,6 +8,10 @@ public class MenuItem implements Hoja{
     protected TipoProducto tipoSupermenu;
     protected int indice;
 
+
+    public MenuItem(int indice){
+        this.indice = indice;
+    }
     /**
     *Constructor de la clase.
     *@param indice el indice del item.
@@ -18,11 +22,11 @@ public class MenuItem implements Hoja{
     *@param tipoSupermenu el tipo de item en em el Super menu.
     */
     public MenuItem(int indice,String nombre ,String descripcion ,boolean esVeganos ,Double precio ,TipoProducto tipoSupermenu){
+    this.indice=indice;
     this.nombre = nombre;
     this.descripcion = descripcion;
     this.esVeganos = esVeganos;
     this.precio = precio;
-    this.indice=indice;
     this.tipoSupermenu = tipoSupermenu;
     }
 
@@ -32,7 +36,8 @@ public class MenuItem implements Hoja{
     }
     @Override
     public Hoja buscaHoja(int indiceHojaABuscar){
-        return null;
+        if(indice == indiceHojaABuscar) return this;
+        else return null;
     }
     @Override
     public LinkedList<Integer> rangoHojas(){

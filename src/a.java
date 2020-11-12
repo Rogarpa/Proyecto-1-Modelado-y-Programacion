@@ -20,7 +20,7 @@ public class a{
         nod.agregarHijo(hamburguesa1);*/
 
         System.out.println(nod.rangoHojas());
-        System.out.println(nod.buscaHoja(3));
+        System.out.println(nod.buscaHoja(6));
         //Robot r2=new Robot();
         //r2.setEstadoActual(r2.getSuspendido());
         //r2.desplegarRecepcionOrden();
