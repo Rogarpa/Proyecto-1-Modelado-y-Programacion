@@ -6,7 +6,7 @@ public class Hamburguesas implements Cocinar{
         System.out.println("Calentando la plancha.");
         System.out.println("Preparando los panes de la Hamburguesa.");
         System.out.println("Calentando la carne en la plancha.");
-        System.out.println("Juntanto todo... Está lista tu Hamburguesa");
+        System.out.println("Juntando todo... Está lista tu Hamburguesa");
     }
 
 }
