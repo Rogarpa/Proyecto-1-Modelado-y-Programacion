@@ -1,4 +1,3 @@
-import java.awt.MenuItem;
 
 public class Robot{
  
@@ -17,38 +16,38 @@ public class Robot{
     private MenuItem menuMaster;
 
     public Robot(){
-        recibiendoOrden = new public EstadoRecibiendoOrden();
-        caminando = new public EstadoCaminando();
-        cocinando = new public EstadoCocinando();
-        entregandoPlatillo = new public EstadoEntregandoPlatillo();
-        suspendido = new public EstadoSuspendido();
+        recibiendoOrden = new EstadoRecibiendoOrden();
+        caminando = new EstadoCaminando();
+        cocinando = new EstadoCocinando();
+        entregandoPlatillo = new EstadoEntregandoPlatillo();
+        suspendido = new EstadoSuspendido();
 
-        public EstadoActual = suspendido;
-
-        //FALTA INSTANCIAR MENU
-    }
-
-
-    public Robot(public EstadoRobot public EstadoActual){
-        this.public EstadoActual = public EstadoActual;
-
-        recibiendoOrden = new public EstadoRecibiendoOrden();
-        caminando = new public EstadoCaminando();
-        cocinando = new public EstadoCocinando();
-        entregandoPlatillo = new public EstadoEntregandoPlatillo();
-        suspendido = new public EstadoSuspendido();
+        EstadoActual = suspendido;
 
         //FALTA INSTANCIAR MENU
     }
 
-    public public EstadoRobot getRecibiendoOrden(){ return recibiendoOrden;}
-    public public EstadoRobot getCaminando(){ return caminando;}
-    public public EstadoRobot getCocinando(){ return cocinando;}
-    public public EstadoRobot getEntregandoPlatillo(){ return entregandoPlatillo;}
-    public public EstadoRobot getSuspendido(){ return suspendido;}
 
-    public void setpublic EstadoActual(public EstadoRobot public EstadoActual){
-        this.public EstadoActual = public EstadoActual;
+    public Robot(EstadoRobot  EstadoActual){
+        this.EstadoActual = EstadoActual;
+
+        recibiendoOrden = new EstadoRecibiendoOrden();
+        caminando = new EstadoCaminando();
+        cocinando = new EstadoCocinando();
+        entregandoPlatillo = new EstadoEntregandoPlatillo();
+        suspendido = new EstadoSuspendido();
+
+        //FALTA INSTANCIAR MENU
+    }
+
+    public EstadoRobot getRecibiendoOrden(){ return recibiendoOrden;}
+    public EstadoRobot getCaminando(){ return caminando;}
+    public EstadoRobot getCocinando(){ return cocinando;}
+    public EstadoRobot getEntregandoPlatillo(){ return entregandoPlatillo;}
+    public EstadoRobot getSuspendido(){ return suspendido;}
+
+    public void EstadoActual(EstadoRobot  EstadoActual){
+        this. EstadoActual = EstadoActual;
     }
 
     public MenuItem getOrden(){return orden;}
