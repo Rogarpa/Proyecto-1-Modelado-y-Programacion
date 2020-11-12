@@ -8,7 +8,16 @@ public class MenuItem implements Hoja{
     protected TipoProducto tipoSupermenu;
     protected int indice;
 
-    public MenuItem(String nombre ,String descripcion ,boolean esVeganos ,Double precio ,TipoProducto tipoSupermenu){
+    /**
+    *Constructor de la clase.
+    *@param indice el indice del item.
+    *@param nombre el nombre del item.
+    *@param descripcion la descripcion del item.
+    *@param esVeganos si es vegano o no el item.
+    *@param precio el precio del item.
+    *@param tipoSupermenu el tipo de item en em el Super menu.
+    */
+    public MenuItem(int indice,String nombre ,String descripcion ,boolean esVeganos ,Double precio ,TipoProducto tipoSupermenu){
     this.nombre = nombre;
     this.descripcion = descripcion;
     this.esVeganos = esVeganos;
@@ -31,7 +40,7 @@ public class MenuItem implements Hoja{
         rango.add(indice);
         return rango;
     }
-    @Override 
+    @Override
     public TipoProducto getTipoSupermenu(){
         return tipoSupermenu;
     }
