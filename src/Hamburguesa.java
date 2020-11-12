@@ -5,12 +5,20 @@ public class Hamburguesa implements ElementoMenu{
     protected LinkedList<ElementoMenu> listaHijos;
 
     public Hamburguesa(){
-        listaHijos = new LinkedList<>();
+        listaHijos hijo0 = new LinkedList<>("HAMBURGUESA DE QUESO","Hamburguesa solo de queso", False, 90, "");
+        listaHijos hijo1 = new LinkedList<>("HAMBURGUESA PICANTE","Hamburguesa con salsa y jalapeños", False, 100, "");
+        listaHijos hijo2 = new LinkedList<>("HAMBURGUESA CON TOCINO","Hamburguesa con Tocino y queso", False, 120, "");
+        listaHijos hijo3 = new LinkedList<>("HAMBURGUESA VEGANA ","Hamburguesa sin carne exclusivamente vegetales ", True, 110, "");
+        listaHijos hijo4 = new LinkedList<>("KANGREBURGER ","Hamburguesa clasica", False, 105, "");
         //llenadoMenu
     }
-
+    
     public void agregarHijo(ElementoMenu h){
-        listaHijos.add(h);
+        listaHijos.add(hijo0);
+        listaHijos.add(hijo1);
+        listaHijos.add(hijo2);
+        listaHijos.add(hijo3);
+        listaHijos.add(hijo4);
     }
 
     public void eliminaHIjo(ElementoMenu h){
@@ -19,7 +27,7 @@ public class Hamburguesa implements ElementoMenu{
 
     @Override
     public String toString(){
-        return "";
+        return hijo0 + " " + hijo1 + " " + hijo2 + " " + hijo3 + " " + hijo4;
     }
 
     @Override
@@ -29,11 +37,11 @@ public class Hamburguesa implements ElementoMenu{
 
     @Override
     public LinkedList<Integer> rangoHojas(){
-    /**int min=0;
+    int min=0;
     int max=0;
     for(ElementoMenu elem:listaHijos){
         getIndexof(elem);
-    }*/
+    }
     return null;
     }
 }
