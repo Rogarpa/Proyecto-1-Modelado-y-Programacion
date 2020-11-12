@@ -43,7 +43,7 @@ public class Pizza implements ElementoMenu{
         for(Integer elem2:aux2){
             if(elem2>max){
                 max=elem2;
-            }else if(elem2<=min){
+            }else if(elem2<min){
                 min=elem2;
             }
         }

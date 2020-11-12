@@ -22,6 +22,7 @@ public class MenuItem implements Hoja{
     this.descripcion = descripcion;
     this.esVeganos = esVeganos;
     this.precio = precio;
+    this.indice=indice;
     this.tipoSupermenu = tipoSupermenu;
     }
 

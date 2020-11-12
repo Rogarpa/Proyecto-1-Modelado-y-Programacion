@@ -5,6 +5,16 @@ public class Nodo implements ElementoMenu{
 
     public Nodo(){
         listaHijos = new LinkedList<>();
+        /**
+        *Esto es para probar el metodo rangoHojas() no es importante.
+        *MenuItem burrito1=new MenuItem(1,"","",false,0.30,TipoProducto.burrito);
+        MenuItem pizza1=new MenuItem(2,"","",false,0.30,TipoProducto.pizza);
+        //MenuItem hamburguesa1=new MenuItem(3,"","",false,0.30,TipoProducto.burrito);
+        listaHijos.add(burrito1);
+        listaHijos.add(pizza1);
+        //listaHijos.add(hamburguesa1);
+        *
+        */
     }
 
     /**
@@ -33,8 +43,8 @@ public class Nodo implements ElementoMenu{
 
     @Override
     public LinkedList<Integer> rangoHojas(){
-        int max=0;
-        int min=0;
+        int max=1;
+        int min=1;
         LinkedList<Integer> aux=new LinkedList<>();
         LinkedList<Integer> aux2=new LinkedList<>();
         for(ElementoMenu elem:listaHijos){
@@ -42,7 +52,7 @@ public class Nodo implements ElementoMenu{
             for (Integer elem2:aux2){
                 if(elem2>max){
                     max=elem2;
-                }else if(elem2<=min){
+                }else if(elem2<min){
                     min=elem2;
                 }
             }

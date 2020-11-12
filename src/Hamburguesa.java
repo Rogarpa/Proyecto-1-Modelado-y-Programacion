@@ -34,11 +34,11 @@ public class Hamburguesa implements ElementoMenu{
     public Hoja buscaHoja(int indiceHojaABuscar){
         return null;
     }
-    
+
     @Override
     public LinkedList<Integer> rangoHojas(){
-    int min=0;
-    int max=0;
+    int min=1;
+    int max=1;
     LinkedList<Integer> aux=new LinkedList<>();
     LinkedList<Integer> aux2=new LinkedList<>();
     for(ElementoMenu elem:listaHijos){
