@@ -6,6 +6,7 @@ public class MenuItem implements Hoja{
     protected boolean esVeganos;
     protected Double precio;
     protected TipoProducto tipoSupermenu;
+    protected int indice;
 
     public MenuItem(String nombre ,String descripcion ,boolean esVeganos ,Double precio ,TipoProducto tipoSupermenu){
     this.nombre = nombre;
@@ -25,7 +26,10 @@ public class MenuItem implements Hoja{
     }
     @Override
     public LinkedList<Integer> rangoHojas(){
-        return null;
+        LinkedList<Integer> rango = new LinkedList<>();
+        rango.add(indice);
+        rango.add(indice);
+        return rango;
     }
     @Override 
     public TipoProducto getTipoSupermenu(){
