@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 public class MenuItem implements Hoja{
     protected String nombre;
     protected String descripcion;
@@ -19,12 +21,15 @@ public class MenuItem implements Hoja{
     }
     @Override
     public Hoja buscaHoja(int indiceHojaABuscar){
-
+        return null;
     }
-
     @Override
     public LinkedList<Integer> rangoHojas(){
         return null;
+    }
+    @Override 
+    public TipoProducto getTipoSupermenu(){
+        return tipoSupermenu;
     }
 
 }

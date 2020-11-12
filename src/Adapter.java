@@ -1,18 +1,21 @@
-public class Adapter implements Enum{
+import java.util.LinkedList;
+
+public class Adapter implements Hoja{
 
     private Mercancia adapt;
     private int indice;
+    protected TipoProducto tipoSupermenu;
 
     @Override
-    public int getEnum(){
-        this.adapt.getIndice();
+    public TipoProducto getTipoSupermenu(){
+        return tipoSupermenu;
     }
 
     /**
     *Constructor de la clase.
     */
     public Adapter(){
-        this.adapt=new Mercancia();
+        this.adapt=new Mercancia(1,"String nombre","String type",1,"String color","material");
 
     }
 
@@ -25,12 +28,12 @@ public class Adapter implements Enum{
     }
 
     @Override
-    public void busca(int indice){
-        this.adapt.encuentra(indice);
+    public Hoja buscaHoja(int indice){
+        return this.adapt.encuentra(indice);
     }
 
     @Override
-    public void hijos(int indice){
-        this.adapt.getIndicesMercancias(indice);
+    public LinkedList<Integer> rangoHojas(){
+        return this.adapt.getIndicesMercancias(indice);
     }
 }

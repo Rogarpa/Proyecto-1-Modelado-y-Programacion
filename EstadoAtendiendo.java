@@ -5,37 +5,37 @@ public class EstadoAtendiendo implements EstadoRobot{
         this.dueño = dueño;
     }
     
-    @Override void activarse(){
+    @Override public void activarse(){
         System.out.println("No es posible activarse.");
         throw new UnsupportedOperationException("Acción no disponible en el robot.");
     }
-    @Override void suspenderse(){
+    @Override public void suspenderse(){
         System.out.println("Suspendiendo");
         dueño.setEstadoActual(dueño.getSuspendido());
     }
-    @Override void recibirOrden(){
+    @Override public void recibirOrden(){
         System.out.println("Recibiendo Orden.");
         dueño.desplegarRecepcionOrden();
         dueño.setEstadoActual(dueño.getAtendiendo());
     }
-    @Override void entregarPlatillo(){
+    @Override public void entregarPlatillo(){
         System.out.println("Entregando Platillo.");
-        dueño.entregarPlatillo();
+        dueño.desplegarEntregaPlatillo();
         dueño.setEstadoActual(dueño.getAtendiendo());
     }
-    @Override void irALaBarra(){
+    @Override public void irALaBarra(){
         System.out.println("No es posible ir a la barra.");
         throw new UnsupportedOperationException("Acción no disponible en el robot.");
     }
-    @Override void caminar(){
+    @Override public void caminar(){
         System.out.println("Caminando");
-        dueño.setEstadoActual(dueño.getCaminar());
+        dueño.setEstadoActual(dueño.getCaminando());
     }
-    @Override void irALaCocina(){
+    @Override public void irALaCocina(){
         System.out.println("No es posbile ir a la cocina.");
         throw new UnsupportedOperationException("Acción no disponible en el robot.");
     }
-    @Override void cocinar(){
+    @Override public void cocinar(){
         System.out.println("No es posible cocinar.");
         throw new UnsupportedOperationException("Acción no disponible en el robot.");
     }

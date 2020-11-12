@@ -4,7 +4,7 @@ public class Nodo implements ElementoMenu{
     protected LinkedList<ElementoMenu> listaHijos;
 
     public Nodo(){
-        hijos = new LinkedList<>();
+        listaHijos = new LinkedList<>();
     }
 
     /**
@@ -28,7 +28,7 @@ public class Nodo implements ElementoMenu{
         return "";
     }
     public Hoja buscaHoja(int indiceHojaABuscar){
-
+        return null;
     }
 
     @Override
@@ -47,5 +47,8 @@ public class Nodo implements ElementoMenu{
                 }
             }
         }
+        aux.add(min);
+        aux.add(max);
+        return aux;
     }
 }

@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 public class Mercancia{
 
     public int indice;
@@ -56,7 +57,7 @@ public class Mercancia{
     *Metodo para obtener los indices donde son Mercancias.
     *@return el arreglo con los indices de las mercancias.
     */
-    public int[] getIndicesMercancias(int ind){
+    public LinkedList<Integer> getIndicesMercancias(int ind){
         return null;
     }
 }

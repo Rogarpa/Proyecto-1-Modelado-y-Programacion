@@ -32,7 +32,7 @@ public class Hamburguesa implements ElementoMenu{
 
     @Override
     public Hoja buscaHoja(int indiceHojaABuscar){
-
+        return null;
     }
     
     @Override
@@ -44,9 +44,9 @@ public class Hamburguesa implements ElementoMenu{
     for(ElementoMenu elem:listaHijos){
         aux2=elem.rangoHojas();
         for(Integer elem2:aux2){
-            if(indexOf(elem2)>max){
+            if(elem2>max){
                 max=elem2;
-            }else if(indexOf(elem2)<=min){
+            }else if(elem2<min){
                 min=elem2;
             }
         }

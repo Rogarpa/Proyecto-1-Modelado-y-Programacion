@@ -1,7 +1,7 @@
 public enum TipoProducto{
-    hamburguesa
-    pizza
-    burrito
+    hamburguesa,
+    pizza,
+    burrito,
     mercancia
 
 }

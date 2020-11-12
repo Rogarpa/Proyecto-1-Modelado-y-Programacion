@@ -13,7 +13,6 @@ public class Pizza implements ElementoMenu{
     *@param h el elemento a gregar.
     */
     public void agregarHijo(ElementoMenu h){
-        listaHijos.add(h);
     }
 
     /**
@@ -21,7 +20,6 @@ public class Pizza implements ElementoMenu{
     *@param h el elemento a eliminar.
     */
     public void eliminaHIjo(ElementoMenu h){
-        listaHijos.remove(h);
     }
 
     @Override
@@ -31,7 +29,7 @@ public class Pizza implements ElementoMenu{
 
     @Override
     public Hoja buscaHoja(int indiceHojaABuscar){
-
+        return null;
     }
 
     @Override

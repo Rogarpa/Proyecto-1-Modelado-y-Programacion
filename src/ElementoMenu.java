@@ -10,7 +10,7 @@ public interface ElementoMenu{
     /***
     *Método que nos permite buscar un elemento especifico.
     */
-    public void buscaHoja();
+    public Hoja buscaHoja(int indiceHojaABuscar);
 
     /**
     *Método que nos devuelve un "rango" de elementos.

@@ -1,26 +1,24 @@
-
+import java.util.Scanner;
 public class Robot{
  
-    private EstadoRobot recibiendoOrden;
     private EstadoRobot caminando;
     private EstadoRobot cocinando;
-    private EstadoRobot entregandoPlatillo;
     private EstadoRobot suspendido;
+    private EstadoRobot atendiendo;
 
     private EstadoRobot EstadoActual;
 
     private MenuItem orden;
 
-    private Cocina moduloCocina;
+    private Cocinar moduloCocina;
 
     private MenuItem menuMaster;
 
     public Robot(){
-        recibiendoOrden = new EstadoRecibiendoOrden();
-        caminando = new EstadoCaminando();
-        cocinando = new EstadoCocinando();
-        entregandoPlatillo = new EstadoEntregandoPlatillo();
-        suspendido = new EstadoSuspendido();
+        caminando = new EstadoCaminando(this);
+        cocinando = new EstadoCocinando(this);
+        atendiendo = new EstadoAtendiendo(this);
+        suspendido = new EstadoSuspendido(this);
 
         EstadoActual = suspendido;
 
@@ -31,27 +29,24 @@ public class Robot{
     public Robot(EstadoRobot  EstadoActual){
         this.EstadoActual = EstadoActual;
 
-        recibiendoOrden = new EstadoRecibiendoOrden();
-        caminando = new EstadoCaminando();
-        cocinando = new EstadoCocinando();
-        entregandoPlatillo = new EstadoEntregandoPlatillo();
-        suspendido = new EstadoSuspendido();
-
+        caminando = new EstadoCaminando(this);
+        cocinando = new EstadoCocinando(this);
+        atendiendo = new EstadoAtendiendo(this);
+        suspendido = new EstadoSuspendido(this);
         //FALTA INSTANCIAR MENU
     }
 
-    public EstadoRobot getRecibiendoOrden(){ return recibiendoOrden;}
     public EstadoRobot getCaminando(){ return caminando;}
     public EstadoRobot getCocinando(){ return cocinando;}
-    public EstadoRobot getEntregandoPlatillo(){ return entregandoPlatillo;}
+    public EstadoRobot getAtendiendo(){ return atendiendo;}
     public EstadoRobot getSuspendido(){ return suspendido;}
 
-    public void EstadoActual(EstadoRobot  EstadoActual){
+    public void setEstadoActual(EstadoRobot  EstadoActual){
         this. EstadoActual = EstadoActual;
     }
 
     public MenuItem getOrden(){return orden;}
-    public MenutItem getMenuMaster(){return menuMaster;}
+    public MenuItem getMenuMaster(){return menuMaster;}
 
     /**
      * Imprime una indicacion y devuelve la entrada estandar hasta que esta es capaz de ser guardada en un entero, de lo contrario imprime un mensaje de error y la indicacion de nuevo hasta que es asi.
@@ -90,8 +85,9 @@ public class Robot{
         System.out.println("///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println("///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
         
-        indicePedido = getint("Digite el numero de la opcion y presione enter:" + "/n" + menuMaster.toString() ,"No es un numero valido.", menuMaster.numeroHojas());
-        menuMaster.busca(indicePedido);
+        //ARREGLAR ITERACION LIMITE SUPERIOR E INFERIOR
+        indicePedido = getint("Digite el numero de la opcion y presione enter:" + "/n" + menuMaster.toString() ,"No es un numero valido.",1,2);
+        menuMaster.buscaHoja(indicePedido);
         System.out.println("Orden recibida.");
         
     }

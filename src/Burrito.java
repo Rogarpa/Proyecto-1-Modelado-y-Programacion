@@ -14,7 +14,6 @@ public class Burrito implements ElementoMenu{
     *@param h el elemento a agregar.
     */
     public void agregarHijo(ElementoMenu h){
-        listaHijos.add(h);
     }
 
     @Override
@@ -24,7 +23,7 @@ public class Burrito implements ElementoMenu{
 
     @Override
     public Hoja buscaHoja(int indiceHojaABuscar){
-
+        return null;
     }
 
     @Override
@@ -47,6 +46,5 @@ public class Burrito implements ElementoMenu{
     aux.add(min);
     aux.add(max);
     return aux;
-    return null;
     }
 }
