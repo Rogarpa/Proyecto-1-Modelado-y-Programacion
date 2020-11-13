@@ -31,8 +31,8 @@ public class Hamburguesa implements ElementoMenu{
     }
 
     @Override
-    public Hoja buscaHoja(int indiceHojaABuscar){
-        Hoja aux;
+    public Producto buscaHoja(int indiceHojaABuscar){
+        Producto aux;
         for(ElementoMenu em: listaHijos){
             aux = em.buscaHoja(indiceHojaABuscar);
             if(aux != null){

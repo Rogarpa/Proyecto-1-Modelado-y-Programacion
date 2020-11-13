@@ -27,8 +27,8 @@ public class Nodo implements ElementoMenu{
     public String toString(){
         return "";
     }
-    public Hoja buscaHoja(int indiceHojaABuscar){
-        Hoja aux;
+    public Producto buscaHoja(int indiceHojaABuscar){
+        Producto aux;
         for(ElementoMenu em: listaHijos){
             aux = em.buscaHoja(indiceHojaABuscar);
             if(aux != null){

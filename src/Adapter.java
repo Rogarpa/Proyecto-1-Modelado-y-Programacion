@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-public class Adapter implements Hoja{
+public class Adapter implements Producto{
 
     private Mercancia adapt;
     private int indice;
@@ -27,13 +27,4 @@ public class Adapter implements Hoja{
         return this.adapt.leerEtiqueta();
     }
 
-    @Override
-    public Hoja buscaHoja(int indice){
-        return this.adapt.encuentra(indice);
-    }
-
-    @Override
-    public LinkedList<Integer> rangoHojas(){
-        return this.adapt.getIndicesMercancias(indice);
-    }
 }

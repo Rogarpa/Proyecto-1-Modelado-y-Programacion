@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-public class MenuItem implements Hoja{
+public class MenuItem implements Producto{
     protected String nombre;
     protected String descripcion;
     protected boolean esVeganos;
@@ -34,21 +34,7 @@ public class MenuItem implements Hoja{
     public String toString(){
         return "";
     }
-    @Override
-    public Hoja buscaHoja(int indiceHojaABuscar){
-        if(indice == indiceHojaABuscar) return this;
-        else return null;
-    }
-    @Override
-    public LinkedList<Integer> rangoHojas(){
-        LinkedList<Integer> rango = new LinkedList<>();
-        rango.add(indice);
-        rango.add(indice);
-        return rango;
-    }
-    @Override
-    public TipoProducto getTipoSupermenu(){
-        return tipoSupermenu;
-    }
+
+    public int getIndice(){return indice;}
 
 }

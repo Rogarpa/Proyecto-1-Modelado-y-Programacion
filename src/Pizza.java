@@ -1,10 +1,10 @@
 import java.util.*;
 
-public class Pizza implements ElementoMenu{
+public class Pizza implements ElementoMenu, Iterable{
 
     protected ElementoMenu[] listaHijos;
 
-    public Pizza(){
+    public Pizza(){Array.iter
         listaHijos = new ElementoMenu[10];
     }
 
@@ -28,37 +28,6 @@ public class Pizza implements ElementoMenu{
     }
 
     @Override
-    public Hoja buscaHoja(int indiceHojaABuscar){
-        Hoja aux = null;
-        for(ElementoMenu em: listaHijos){
-            if(em != null) aux = em.buscaHoja(indiceHojaABuscar);
-            if(aux != null){
-                System.out.println("Encontrado en pizza");
-                return aux;
-            }
-        }
-    return null;
-    }
-
-    @Override
-    public LinkedList<Integer> rangoHojas(){
-    int min=1;
-    int max=1;
-    LinkedList<Integer> aux=new LinkedList<>();
-    LinkedList<Integer> aux2=new LinkedList<>();
-    for(ElementoMenu elem:listaHijos){
-        if(elem != null)aux2=elem.rangoHojas();
-
-        for(Integer elem2:aux2){
-            if(elem2>max){
-                max=elem2;
-            }else if(elem2<min){
-                min=elem2;
-            }
-        }
-    }
-    aux.add(min);
-    aux.add(max);
-    return aux;
-    }
+    public Iterator<Producto> iterator(){return new Array}
+    
 }
