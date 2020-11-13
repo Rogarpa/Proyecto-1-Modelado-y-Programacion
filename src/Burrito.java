@@ -18,10 +18,11 @@ public class Burrito extends Iterable<Producto>{
     */
     public void agregarHijo(ElementoMenu h){
     }
-        ElementoMenu.add(listaHijos0);
+     
         ElementoMenu.add(listaHijos1);
         ElementoMenu.add(listaHijos2);
         ElementoMenu.add(listaHijos3);
+        ElementoMenu.add(listaHijos4);
 
     /**
     *Metodo para eliminar elementos del Menu.
