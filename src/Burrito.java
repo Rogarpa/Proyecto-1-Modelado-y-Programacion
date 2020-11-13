@@ -21,7 +21,7 @@ public class Burrito implements ElementoMenu{
 
     @Override
     public String toString(){
-        return "listaHijos0"+"/n" + "listaHijos1"+"/n" + "listaHijos2"+ "/n" + "listaHijos3"+"/n";
+        return "listaHijos0"+"/n" + "listaHijos1"+"/n" + "listaHijos2"+ "/n" + "listaHijos3";
     }
 
     @Override
