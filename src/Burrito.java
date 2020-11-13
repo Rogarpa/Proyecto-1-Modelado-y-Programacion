@@ -33,7 +33,7 @@ public class Burrito extends Iterable<Producto>{
 
     @Override
     public String toString(){
-        return "listaHijo0"+"/n" + "listaHijo1"+"/n" + "ListaHijo2" + "/n" + "ListaHijo3";
+        return "listaHijo1"+"/n" + "listaHijo2"+"/n" + "ListaHijo3" + "/n" + "ListaHijo4";
     }
 
     @Override
