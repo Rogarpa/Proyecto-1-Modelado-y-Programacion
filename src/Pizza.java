@@ -25,7 +25,8 @@ public class Pizza implements ElementoMenu{
 
     @Override
     public String toString(){
-        return  listaHijo0"\n" + listaHijo1"\n"  + ListaHijo2"\n" + ListaHijo3"\n";
+        return  "listaHijo0"+"/n" + "listaHijo1"+"/n" + "ListaHijo2" + "/n" + "ListaHijo3""/n";
+        
     }
 
     @Override
