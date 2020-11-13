@@ -12,16 +12,16 @@ public class Burrito implements ElementoMenu{
         listaHijos3 = new Hashtable<>("BURRITO CLASICO" ,"Burrito sencillo" , True , 70 ,"");
     
     public void agregarHijo(ElementoMenu h){
-        listaHijos1.add(hijos0);
-        listaHijos1.add(hijos1);
-        listaHijos1.add(hijos2);
-        listaHijos1.add(hijos3);
+        listaHijos.add(listaHijos0);
+        listaHijos.add(listaHijos1);
+        listaHijos.add(listaHijos2);
+        listaHijos.add(listaHijos3);
         
     }
 
     @Override
     public String toString(){
-        return "hijo0"\n" + hijo1"\n"  + hijo2"\n" + hijo3"\n";
+        return "listaHijos0"+"/n" + "listaHijos1"+"/n" + "listaHijos2"+ "/n" + "listaHijos3"+"/n";
     }
 
     @Override
