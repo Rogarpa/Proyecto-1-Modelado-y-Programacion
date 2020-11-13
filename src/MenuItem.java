@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 public class MenuItem implements Hoja{
     protected String nombre;
     protected String descripcion;
