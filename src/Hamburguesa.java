@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+i
 
 public class Hamburguesa implements ElementoMenu{
 
@@ -27,7 +28,7 @@ public class Hamburguesa implements ElementoMenu{
 
     @Override
     public String toString(){
-        return hijo0"\n" + hijo1"\n"  + hijo2"\n" + hijo3"\n"  + hijo4"\n";
+        return "hijo0"+"/n" + "hijo1"+"/n" + "hijo2"+"/n" + "hijo3"+"/n" +"hijo4";
     }
 
     @Override
