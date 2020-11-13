@@ -9,15 +9,13 @@ public class Robot{
     
     private EstadoRobot EstadoActual;
     
-    private MenuItem orden;
+    private Prodcuto orden;
     
     private Cocinar moduloCocina;
     
-    private MenuItem menuMaster;
-    
-    private MenuHamburguesa; 
-    private MenuPizza; 
-    private MenuBurrito; 
+    private MenuHamburguesa staticMenuHamburguesa; 
+    private MenuPizza staticMenuPizza; 
+    private MenuBurrito staticMenuBurrito; 
     
     public Robot(){
         caminando = new EstadoCaminando(this);
@@ -30,7 +28,6 @@ public class Robot{
         staticMenuBurrito = new MenuBurrito();
         
         EstadoActual = suspendido;
-        
         
     }
     
@@ -67,6 +64,84 @@ public class Robot{
     public MenuItem getOrden(){return orden;}
     public MenuItem getMenuMaster(){return menuMaster;}
     
+    
+    public void desplegarMenuInicial(){
+        int indicePedido = 0;
+        boolean flag = true;
+        
+        System.out.println("///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println("///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
+        indicePedido = getint("Introduce una opción: \n" + "1.-Salir \n" + "2.-PedirPlatillo", "Introduce una opción válida", 1, 2);
+        do{
+            switch (indicePedido) {
+                case 1:
+                flag = false;
+                break;
+                case 2:
+                rutaPredeterminada();
+                break;
+                
+                default:
+                break;
+            }
+        }while(flag)
+        
+    }
+    
+    public void rutaPredeterminada(){
+        activarse();
+        recibirOrden();
+        caminar();
+        irALaCocina();
+        cocinar();
+        caminar();
+        irALaBarra();
+        entregarPlatillo();
+        suspenderse();
+    }
+    
+    /**
+    * Despliega un menu de acciones posibles a solicitar a todos los estados.
+    */
+    
+    public void desplegarRecepcionOrden(){
+        int indicePedido = 0;
+        
+        System.out.println("///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println("///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
+        
+        menu();
+        
+        indicePedido = getint("Digite el numero de la opcion y presione enter:" + "\n" + menu(),"No es un numero valido.",1, 15);
+        
+        orden = buscaEnMenu(indicePedido);
+        
+        System.out.println("Orden recibida.");
+    }
+    
+    public void desplegarEntregaPlatillo(){
+        System.out.println("Le entrego su platillo y con ella su ticket:");
+        System.out.println(orden.toString());
+    }
+    
+    public String menu(){
+        String s = "";
+        
+        s +="Menu de Hamburguesas \n";
+        for(MenuItem m:staticMenuHamburguesa) s += "   "+ m.toString() + "\n";
+        s += "Menu de Pizzas \n";
+        for(MenuItem m:staticMenuPizza) s += "   "+ m.toString() + "\n";
+        s += "Menu de Burritos \n";
+        for(MenuItem m:staticMenuBurrito) s += "   "+ m.toString() + "\n";
+        return s;
+    }
+    
+    public MenuItem buscaEnMenu(int indicePedido){
+        for(MenuItem m:staticMenuHamburguesa) if(m.getIndice == indicePedido) return m;
+        for(MenuItem m:staticMenuPizza) if(m.getIndice == indicePedido) return m;
+        for(MenuItem m:staticMenuBurrito) if(m.getIndice == indicePedido) return m;
+    }
+    
     /**
     * Imprime una indicacion y devuelve la entrada estandar hasta que esta es capaz de ser guardada en un entero, de lo contrario imprime un mensaje de error y la indicacion de nuevo hasta que es asi.
     * @param indicacion el mensaje correspondiente a la indicacion.
@@ -93,43 +168,22 @@ public class Robot{
         }while(c);
         return num;
     }
-    
-    /**
-    * Despliega un menu de acciones posibles a solicitar a todos los estados.
-    */
-    
-    public void desplegarRecepcionOrden(){
-        int indicePedido = 0;
-        
-        System.out.println("///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
-        System.out.println("///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
-        
-        imprimeMenu();
-        
-        indicePedido = getint("Digite el numero de la opcion y presione enter:" + "/n" + menuMaster.toString() ,"No es un numero valido.",1, 15);
-        
-        orden = buscaEnMenu(indicePedido);
-        
-        System.out.println("Orden recibida.");
-    }
-    
-    public void desplegarEntregaPlatillo(){
-        System.out.println("Le entrego su platillo y con ella su ticket:");
-        System.out.println(orden.toString());
-    }
-    
-    public String imprimeMenu(){
-        System.out.println("Menu de Hamburguesas");
-        for(MenuItem m:staticMenuHamburguesa) System.out.println("   "+m.toString());
-        System.out.println("Menu de Pizzas");
-        for(MenuItem m:staticMenuPizza) System.out.println("   "+m.toString());
-        System.out.println("Menu de Burritos");
-        for(MenuItem m:staticMenuBurrito) System.out.println("   "+m.toString());
-    }
-    
-    public MenuItem buscaEnMenu(int indicePedido){
-        for(MenuItem m:staticMenuHamburguesa) if(m.getIndice == indicePedido) return m;
-        for(MenuItem m:staticMenuPizza) if(m.getIndice == indicePedido) return m;
-        for(MenuItem m:staticMenuBurrito) if(m.getIndice == indicePedido) return m;
+
+    public void cocinarOrden(){
+        TipoProducto tipoOrden = orden.getTipoSuperMenu();
+        switch (tipoOrden) {
+            case hamburguesa:
+                moduloCocina = new Hamburguesas(); 
+                break;
+            case pizza:
+                moduloCocina = new Pizzas(); 
+                break;
+            case pizza:
+                moduloCocina = new Burritos(); 
+                break;
+            default:
+                break;
+        }       
+        tipoOrden.cocinar();
     }
 }

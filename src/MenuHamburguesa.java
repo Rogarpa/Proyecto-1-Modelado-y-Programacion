@@ -1,11 +1,12 @@
-import java.util.Iterator;
+import java.util.Iterab;
 
-public class Pizza extends Iterable<Producto>{
+public class MenuHamburguesa extends Iterable<Producto>{
 
-    protected Producto[] listaHijos;
+    protected LinkedList<ElementoMenu> listaHijos;
 
-    public Pizza(){
-        listaHijos = new ElementoMenu[10];
+    public MenuHamburguesa(){
+        listaHijos = new LinkedList<>();
+        //llenadoMenu
     }
 
     /**
@@ -13,6 +14,7 @@ public class Pizza extends Iterable<Producto>{
     *@param h el elemento a gregar.
     */
     public void agregarHijo(ElementoMenu h){
+        listaHijos.add(h);
     }
 
     /**
@@ -20,6 +22,7 @@ public class Pizza extends Iterable<Producto>{
     *@param h el elemento a eliminar.
     */
     public void eliminaHIjo(ElementoMenu h){
+        listaHijos.remove(h);
     }
 
     @Override
@@ -27,7 +30,6 @@ public class Pizza extends Iterable<Producto>{
         return "";
     }
 
-    @Override
-    public Iterator<Producto> iterator(){return listaHijos.asList().iterator();}
-    
+    @Override     
+    public Iterator<Producto> iterator(){return listaHijos.iterator();}
 }

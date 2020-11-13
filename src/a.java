@@ -3,6 +3,7 @@ public class a{
         
         Robot r2=new Robot();
         
+        r2.desplegarMenuInicial();
 
     }
 }

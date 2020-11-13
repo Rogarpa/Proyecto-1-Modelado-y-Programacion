@@ -36,6 +36,7 @@ public class EstadoCocinando implements EstadoRobot{
     }
     @Override public void cocinar(){
         System.out.println("Cocinando");
+        dueño.cocinarOrden();
         dueño.setEstadoActual(dueño.getCocinando());
     }
 

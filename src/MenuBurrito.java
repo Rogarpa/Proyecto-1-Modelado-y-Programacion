@@ -2,7 +2,7 @@ import java.util.Collection;
 import java.util.Hashtable;
 import java.util.Iterator;
 
-public class MenuBurrito implements Iterable{
+public class MenuBurrito extends Iterable<Producto>{
 
     private IteradorBurrito implements Iterator<Producto>{
         Iterator llaves;
