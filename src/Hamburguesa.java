@@ -1,5 +1,4 @@
 import java.util.LinkedList;
-i
 
 public class Hamburguesa implements ElementoMenu{
 
