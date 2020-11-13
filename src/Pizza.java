@@ -6,6 +6,7 @@ public class Pizza extends Iterable<Producto>{
 
     public Pizza(){
         listaHijos = new ElementoMenu[10];
+        listaHijos 
     }
 
     /**
