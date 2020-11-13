@@ -2,22 +2,22 @@ import java.util.Collection;
 import java.util.Hashtable;
 import java.util.Iterator;
 
-public class MenuBurrito extends Iterable<Producto>{
+public class MenuBurrito implements Iterable<Producto>{
 
-    private IteradorBurrito implements Iterator<Producto>{
-        Iterator llaves;
+    private class IteradorBurrito implements Iterator<Producto>{
+        Iterator<Producto> llaves;
         
         public IteradorBurrito(){
-            llaves =  listaHijos.values();
+            llaves =  listaHijos.values().iterator();
         }
         
         @Override public boolean hasNext(){return llaves.hasNext();}
         @Override public Producto next(){return listaHijos.get(llaves.next());}
     }
     
-    protectedHashtablee<Integer,ElementoMenu> listaHijos;
+    protected Hashtable<Integer, Producto> listaHijos;
 
-    public Burrito(){
+    public MenuBurrito(){
         listaHijos = new Hashtable<>();
     }
 
@@ -26,7 +26,7 @@ public class MenuBurrito extends Iterable<Producto>{
     *Metodo para agregar elementos a la hashtable.
     *@param h el elemento a agregar.
     */
-    public void agregarHijo(ElementoMenu h){
+    public void agregarHijo(Producto h){
     }
 
     @Override

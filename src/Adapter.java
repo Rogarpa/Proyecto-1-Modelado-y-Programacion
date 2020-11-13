@@ -27,4 +27,7 @@ public class Adapter implements Producto{
         return this.adapt.leerEtiqueta();
     }
 
+    public int getIndice(){
+        return indice;
+    }
 }

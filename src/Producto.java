@@ -4,7 +4,8 @@
         *@return el indice del elemento.
         */
         public TipoProducto getTipoSupermenu();
+        public int getIndice();
         
     }
-    
+
     

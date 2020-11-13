@@ -1,8 +1,9 @@
-import java.util.Iterab;
+import java.util.LinkedList;
+import java.util.Iterator;
 
-public class MenuHamburguesa extends Iterable<Producto>{
+public class MenuHamburguesa implements Iterable<Producto>{
 
-    protected LinkedList<ElementoMenu> listaHijos;
+    protected LinkedList<Producto> listaHijos;
 
     public MenuHamburguesa(){
         listaHijos = new LinkedList<>();
@@ -13,7 +14,7 @@ public class MenuHamburguesa extends Iterable<Producto>{
     *Método para agregar elementos al menu.
     *@param h el elemento a gregar.
     */
-    public void agregarHijo(ElementoMenu h){
+    public void agregarHijo(Producto h){
         listaHijos.add(h);
     }
 
@@ -21,7 +22,7 @@ public class MenuHamburguesa extends Iterable<Producto>{
     *Metodo para eliminar elementos del Menu.
     *@param h el elemento a eliminar.
     */
-    public void eliminaHIjo(ElementoMenu h){
+    public void eliminaHIjo(Producto h){
         listaHijos.remove(h);
     }
 
@@ -31,5 +32,5 @@ public class MenuHamburguesa extends Iterable<Producto>{
     }
 
     @Override     
-    public Iterator<Producto> iterator(){return listaHijos.iterator();}
+    public Iterator<Producto> iterator(){return (listaHijos.iterator());}
 }

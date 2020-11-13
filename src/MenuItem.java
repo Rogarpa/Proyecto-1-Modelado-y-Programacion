@@ -35,6 +35,12 @@ public class MenuItem implements Producto{
         return "";
     }
 
+    @Override
+    public TipoProducto getTipoSupermenu(){
+        return tipoSupermenu;
+    }
+
     public int getIndice(){return indice;}
 
+    
 }

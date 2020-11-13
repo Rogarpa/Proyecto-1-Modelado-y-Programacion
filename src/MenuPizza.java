@@ -1,25 +1,26 @@
+import java.util.Arrays;
 import java.util.Iterator;
 
-public class Pizza extends Iterable<Producto>{
+public class MenuPizza implements Iterable<Producto>{
 
     protected Producto[] listaHijos;
 
-    public Pizza(){
-        listaHijos = new ElementoMenu[10];
+    public MenuPizza(){
+        listaHijos = new Producto[10];
     }
 
     /**
     *Método para agregar elementos al menu.
     *@param h el elemento a gregar.
     */
-    public void agregarHijo(ElementoMenu h){
+    public void agregarHijo(Producto h){
     }
 
     /**
     *Metodo para eliminar elementos del Menu.
     *@param h el elemento a eliminar.
     */
-    public void eliminaHIjo(ElementoMenu h){
+    public void eliminaHIjo(Producto h){
     }
 
     @Override
@@ -28,6 +29,6 @@ public class Pizza extends Iterable<Producto>{
     }
 
     @Override
-    public Iterator<Producto> iterator(){return listaHijos.asList().iterator();}
+    public Iterator<Producto> iterator(){return Arrays.stream(listaHijos).iterator();}
     
 }

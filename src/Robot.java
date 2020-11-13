@@ -1,5 +1,6 @@
 import java.util.Iterator;
 import java.util.Scanner;
+
 public class Robot{
     
     private EstadoRobot caminando;
@@ -9,7 +10,7 @@ public class Robot{
     
     private EstadoRobot EstadoActual;
     
-    private Prodcuto orden;
+    private Producto orden;
     
     private Cocinar moduloCocina;
     
@@ -61,10 +62,6 @@ public class Robot{
         this. EstadoActual = EstadoActual;
     }
     
-    public MenuItem getOrden(){return orden;}
-    public MenuItem getMenuMaster(){return menuMaster;}
-    
-    
     public void desplegarMenuInicial(){
         int indicePedido = 0;
         boolean flag = true;
@@ -75,16 +72,16 @@ public class Robot{
         do{
             switch (indicePedido) {
                 case 1:
-                flag = false;
-                break;
+                    flag = false;
+                    break;
                 case 2:
-                rutaPredeterminada();
-                break;
+                    rutaPredeterminada();
+                    break;
                 
                 default:
                 break;
             }
-        }while(flag)
+        }while(flag);
         
     }
     
@@ -110,7 +107,7 @@ public class Robot{
         System.out.println("///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println("///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
         
-        menu();
+        System.out.println(menu());
         
         indicePedido = getint("Digite el numero de la opcion y presione enter:" + "\n" + menu(),"No es un numero valido.",1, 15);
         
@@ -128,18 +125,19 @@ public class Robot{
         String s = "";
         
         s +="Menu de Hamburguesas \n";
-        for(MenuItem m:staticMenuHamburguesa) s += "   "+ m.toString() + "\n";
+        for(Producto m:staticMenuHamburguesa) s += "   "+ m.toString() + "\n";
         s += "Menu de Pizzas \n";
-        for(MenuItem m:staticMenuPizza) s += "   "+ m.toString() + "\n";
+        for(Producto m:staticMenuPizza) s += "   "+ m.toString() + "\n";
         s += "Menu de Burritos \n";
-        for(MenuItem m:staticMenuBurrito) s += "   "+ m.toString() + "\n";
+        for(Producto m:staticMenuBurrito) s += "   "+ m.toString() + "\n";
         return s;
     }
     
-    public MenuItem buscaEnMenu(int indicePedido){
-        for(MenuItem m:staticMenuHamburguesa) if(m.getIndice == indicePedido) return m;
-        for(MenuItem m:staticMenuPizza) if(m.getIndice == indicePedido) return m;
-        for(MenuItem m:staticMenuBurrito) if(m.getIndice == indicePedido) return m;
+    public Producto buscaEnMenu(int indicePedido){
+        for(Producto m:staticMenuHamburguesa) if(m.getIndice() == indicePedido) return m;
+        for(Producto m:staticMenuPizza) if(m.getIndice() == indicePedido) return m;
+        for(Producto m:staticMenuBurrito) if(m.getIndice() == indicePedido) return m;
+        return null;
     }
     
     /**
@@ -170,7 +168,7 @@ public class Robot{
     }
 
     public void cocinarOrden(){
-        TipoProducto tipoOrden = orden.getTipoSuperMenu();
+        TipoProducto tipoOrden = orden.getTipoSupermenu();
         switch (tipoOrden) {
             case hamburguesa:
                 moduloCocina = new Hamburguesas(); 
@@ -178,12 +176,12 @@ public class Robot{
             case pizza:
                 moduloCocina = new Pizzas(); 
                 break;
-            case pizza:
+            case burrito:
                 moduloCocina = new Burritos(); 
                 break;
             default:
                 break;
         }       
-        tipoOrden.cocinar();
+        moduloCocina.cocinar((MenuItem)orden);
     }
 }
