@@ -1,5 +1,5 @@
 import java.util.LinkedList;
-public class Mercancia{
+public class Mercancia{     //Clase en la definimos ala mercancia
 
     public int indice;
 
