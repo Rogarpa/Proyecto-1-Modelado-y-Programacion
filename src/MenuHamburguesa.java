@@ -14,27 +14,6 @@ public class MenuHamburguesa implements Iterable<Producto>{
         listaHijos.add(new MenuItem(5,"KANGREBURGER","Hamburguesa clasica", false, 105.00, TipoProducto.hamburguesa));
     }
 
-    /**
-    *Método para agregar elementos al menu.
-    *@param h el elemento a gregar.
-    */
-    public void agregarHijo(Producto h){
-        listaHijos.add(h);
-    }
-
-    /**
-    *Metodo para eliminar elementos del Menu.
-    *@param h el elemento a eliminar.
-    */
-    public void eliminaHIjo(Producto h){
-        listaHijos.remove(h);
-    }
-
-    @Override
-    public String toString(){
-        return "";
-    }
-
     @Override     
     public Iterator<Producto> iterator(){return (listaHijos.iterator());}
 }
