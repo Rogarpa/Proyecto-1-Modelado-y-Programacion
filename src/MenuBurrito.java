@@ -19,7 +19,7 @@ public class MenuBurrito implements Iterable<Producto>{
     public MenuBurrito(){
         this.listaHijos = new Hashtable<String,Producto>();
         this.listaHijos.put("burrito de queso",new MenuItem(10,"BURRITO DE QUESO","Burrito con relleno de queso", false, 90.00, TipoProducto.burrito));
-        this.listaHijos.put("burrito vegano",new MenuItem(11,"URRITO VEGANO","Pizza solo de vegetales", true, 100.00, TipoProducto.burrito));
+        this.listaHijos.put("burrito vegano",new MenuItem(11,"BURRITO VEGANO","Pizza solo de vegetales", true, 100.00, TipoProducto.burrito));
         this.listaHijos.put("burrito carne",new MenuItem(12,"BURRITO DE CARNE","Burrito con exclusivamente de carne", false, 120.00, TipoProducto.burrito));
         this.listaHijos.put("burrito clasico",new MenuItem(13,"BURRITO CLASICO","Burrito sencillo", false, 70.00, TipoProducto.burrito));
 
