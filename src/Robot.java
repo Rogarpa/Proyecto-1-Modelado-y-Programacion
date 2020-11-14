@@ -189,7 +189,6 @@ public class Robot{
             default:
                 break;
         }       
-        System.out.println("Modulo de cocina es " + moduloCocina);
         moduloCocina.cocinar((MenuItem)orden);
     }
 }

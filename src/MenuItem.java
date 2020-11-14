@@ -32,8 +32,7 @@ public class MenuItem implements Producto{
 
     @Override
     public String toString(){
-        return "";
-        
+        return "Menu " + indice + " " + nombre + " " + descripcion + " " + esVeganos + " " + "$ "+ precio + " " +  tipoSupermenu;
     }
 
     @Override
