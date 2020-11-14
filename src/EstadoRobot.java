@@ -1,3 +1,4 @@
+//Interface del estado actual del robot  
 public interface EstadoRobot{
     
     /**Realiza la acción de activarse
