@@ -113,7 +113,7 @@ public class Robot{
         indicePedido = getint("Digite el numero de la opcion y presione enter:" + "\n" + menu(),"No es un numero valido.",1, 23);
 
         do{
-            if(indicePedido>0 && indicePedido<13){
+            if(indicePedido>0 && indicePedido<=23){
                 mko=false;
             }else{
                 System.out.println("///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
