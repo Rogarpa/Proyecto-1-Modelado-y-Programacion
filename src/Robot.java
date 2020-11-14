@@ -109,7 +109,7 @@ public class Robot{
         
         System.out.println(menu());
         
-        indicePedido = getint("Digite el numero de la opcion y presione enter:" + "\n" + menu(),"No es un numero valido.",1, 15);
+        indicePedido = getint("Digite el numero de la opcion y presione enter:" + "\n" + menu(),"No es un numero valido.",1, 13);
         
         orden = buscaEnMenu(indicePedido);
         
@@ -127,16 +127,22 @@ public class Robot{
         s +="Menu de Hamburguesas \n";
         for(Producto m:staticMenuHamburguesa) s += "   "+ m.toString() + "\n";
         s += "Menu de Pizzas \n";
-        for(Producto m:staticMenuPizza) s += "   "+ m.toString() + "\n";
+        for(Producto m:staticMenuPizza) 
+            if(m != null)s += "   "+ m.toString() + "\n";
         s += "Menu de Burritos \n";
-        for(Producto m:staticMenuBurrito) s += "   "+ m.toString() + "\n";
+        for(Producto m:staticMenuBurrito) if(m!=null) s += "   "+ m.toString() + "\n";
         return s;
     }
     
     public Producto buscaEnMenu(int indicePedido){
         for(Producto m:staticMenuHamburguesa) if(m.getIndice() == indicePedido) return m;
-        for(Producto m:staticMenuPizza) if(m.getIndice() == indicePedido) return m;
-        for(Producto m:staticMenuBurrito) if(m.getIndice() == indicePedido) return m;
+        for(Producto m:staticMenuPizza) 
+            if(m!=null) 
+                if(m.getIndice() == indicePedido) return m;
+        for(Producto m:staticMenuBurrito) {
+            if(m!=null)
+                if(m.getIndice() == indicePedido) return m;
+        }
         return null;
     }
     
@@ -157,7 +163,7 @@ public class Robot{
             System.out.println(indicacion);
             if(scn.hasNextInt()){
                 num=scn.nextInt();
-                if(num<limiteInferior||num>limiteSuperior) c=false;
+                if(num<=limiteInferior||num<=limiteSuperior) c=false;
             }
             else{
                 scn.next();

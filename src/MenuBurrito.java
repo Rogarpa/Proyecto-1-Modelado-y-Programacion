@@ -19,6 +19,10 @@ public class MenuBurrito implements Iterable<Producto>{
 
     public MenuBurrito(){
         listaHijos = new Hashtable<>();
+        listaHijos.put(10, new MenuItem(10));
+        listaHijos.put(11, new MenuItem(11));
+        listaHijos.put(12, new MenuItem(12));
+        listaHijos.put(13, new MenuItem(13));
     }
 
 
