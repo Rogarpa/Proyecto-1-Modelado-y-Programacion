@@ -66,10 +66,11 @@ public class Robot{
         int indicePedido = 0;
         boolean flag = true;
         
-        System.out.println("///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
+        
+        do{
+            System.out.println("///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println("///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
         indicePedido = getint("Introduce una opción: \n" + "1.-Salir \n" + "2.-PedirPlatillo", "Introduce una opción válida", 1, 2);
-        do{
             switch (indicePedido) {
                 case 1:
                     flag = false;
@@ -163,7 +164,7 @@ public class Robot{
             System.out.println(indicacion);
             if(scn.hasNextInt()){
                 num=scn.nextInt();
-                if(num<=limiteInferior||num<=limiteSuperior) c=false;
+                if(num>=limiteInferior||num<=limiteSuperior) c=false;
             }
             else{
                 scn.next();
@@ -188,6 +189,7 @@ public class Robot{
             default:
                 break;
         }       
+        System.out.println("Modulo de cocina es " + moduloCocina);
         moduloCocina.cocinar((MenuItem)orden);
     }
 }

@@ -14,8 +14,8 @@ public class Adapter implements Producto{
     /**
     *Constructor de la clase.
     */
-    public Adapter(){
-        this.adapt=new Mercancia(1,"String nombre","String type",1,"String color","material");
+    public Adapter(Mercancia adapt){
+        this.adapt = adapt;
 
     }
 
