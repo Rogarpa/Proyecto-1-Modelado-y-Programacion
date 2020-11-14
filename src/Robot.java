@@ -116,6 +116,8 @@ public class Robot{
             if(indicePedido>0 && indicePedido<13){
                 mko=false;
             }else{
+                System.out.println("///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
+                System.out.println("NO es un indice correcto :'v");
                 indicePedido = getint("Digite el numero de la opcion y presione enter:" + "\n" + menu(),"No es un numero valido.",1, 23);
             }
         }while(mko);
