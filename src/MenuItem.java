@@ -32,7 +32,7 @@ public class MenuItem implements Producto{
 
     @Override
     public String toString(){
-        return "";
+        return indice + nombre + descripcion + esVeganos + precio + "$" +  tipoSupermenu;
     }
 
     @Override
